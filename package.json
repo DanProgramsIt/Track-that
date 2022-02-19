@@ -1,0 +1,29 @@
+{
+  "name": "track-that",
+  "version": "1.0.0",
+  "description": "Application to view and manage employees",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanProgramsIt/Track-that.git"
+  },
+  "keywords": [],
+  "author": "Daniel Mendez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanProgramsIt/Track-that/issues"
+  },
+  "homepage": "https://github.com/DanProgramsIt/Track-that#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.0",
+    "mysql": "^2.18.1"
+  }
+}
