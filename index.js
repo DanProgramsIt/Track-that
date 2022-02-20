@@ -1,5 +1,5 @@
 const EmpData = require("./lib/EmpData");
-const connect = require("./lib/dbConn");
+const connection = require("./lib/dbConn");
 const cTable = require("console.table");
 const figlet = require("figlet");
 const inquirer = require("inquirer");
@@ -7,7 +7,6 @@ const update = require("./lib/updateFunc");
 const add = require("./lib/addFunc");
 const view = require("./lib/viewFunc");
 const del = require("./lib/delFunc");
-const connection = require("./lib/dbConn");
 
 // Prompt user for answers
 const promptUser = (questions) => {
@@ -25,11 +24,11 @@ const exitApp = () => {
 const actionFunctions = {
   "View All Employees": view.viewEmployees,
   "View All Employees by Department": view.viewEmployeesByDept,
-  "View All Employees by Manager": view.viewEmployeesByManager,
+  "View All Employees by Manager": view.viewEmployeesByMgr,
   "Add Employee": add.Employee,
   "Remove Employee": del.delEmployee,
-  "Update Employee Role": update.updateEmployeeRole,
-  "Update Employee Manager": update.updateEmployeeManager,
+  "Update Employee Role": update.updateEmpRole,
+  "Update Employee Manager": update.updateEmpMgr,
   "View All Roles": view.viewRoles,
   "Add Role": add.addRole,
   "Remove Role": del.delRole,
@@ -41,7 +40,7 @@ const actionFunctions = {
 };
 
 // List of Tasks
-const actions = [
+const action = [
   {
     type: "list",
     message: "What would you like to do?",
