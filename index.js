@@ -25,7 +25,7 @@ const actionFunctions = {
   "View All Employees": view.viewEmployees,
   "View All Employees by Department": view.viewEmployeesByDept,
   "View All Employees by Manager": view.viewEmployeesByMgr,
-  "Add Employee": add.Employee,
+  "Add Employee": add.addEmployee,
   "Remove Employee": del.delEmployee,
   "Update Employee Role": update.updateEmpRole,
   "Update Employee Manager": update.updateEmpMgr,
@@ -73,7 +73,7 @@ const init = async () => {
     console.log("\n----------\n");
     await actionFunctions[actionChoice.task]();
     init();
-  } catch (error) {
+  } catch (err) {
     console.log(err);
   }
 };
